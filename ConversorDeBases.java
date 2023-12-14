@@ -206,6 +206,5 @@ public class ConversorDeBases {
     public static void boasVindas() {
         System.out.println("-------------Bem vindo ao conversor de bases!-------------\n");
         System.out.println("Aqui você pode escolher entre conversão de decimal para binário ou de binário para decimal.");
-    }
-    
+    }  
 }
