@@ -1,6 +1,6 @@
 /**
  * Algoritmo de troca de bases (decimal para binário e binário para decimal) aceitando numeros com vírgula
- * @author Gabriel Praes
+ * @author Gabriel Praes, Lucas Gabriel, Brayan Mendes
  */
 
 import java.util.Scanner;
