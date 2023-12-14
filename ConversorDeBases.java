@@ -3,10 +3,12 @@
  * @author Gabriel Praes, Lucas Gabriel, Brayan Mendes
  */
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ConversorDeBases {
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         boasVindas();
@@ -20,7 +22,7 @@ public class ConversorDeBases {
         while(opcao != 0) {
             //decimal para binário
             if(opcao == 1) {
-                System.out.println("Digite o numero a ser convertido (em caso de numero fracionário, utilize virgula): ");
+                System.out.println("Digite o numero decimal a ser convertido (em caso de numero fracionário, utilize ponto): ");
                 double num = sc.nextDouble();
                 System.out.println("Digite o numero de casas decimais: ");
                 int casas = sc.nextInt();
@@ -29,13 +31,13 @@ public class ConversorDeBases {
             }
             //binario para decimal
             else if(opcao == 2) {
-                System.out.println("Digite o numero binário a ser convertido (em caso de numero fracionário, utilize virgula): ");
+                System.out.println("Digite o numero binário a ser convertido (em caso de numero fracionário, utilize ponto): ");
                 String num = sc.next();
                 if(isBin(num)) {
                     System.out.println("\nNumero em decimal: " + binToDec(num));
                 }
                 else {
-                    System.out.println("O numero digitado não é binário ou tem mais de uma vírgula");
+                    System.out.println("O numero digitado não é binário ou tem mais de uma vírgula(ponto)");
                 }
             }
             else {
@@ -67,7 +69,7 @@ public class ConversorDeBases {
 
         //montando as strings de forma separada (parte inteira e parte flutuante)
         bin += decToBinInteiro(inteiro);
-        bin += ',';
+        bin += '.';
         bin += decToBinDecimal(decimal, casas);
 
         return bin;
@@ -147,7 +149,7 @@ public class ConversorDeBases {
 
         //numeros antes da vírgula
         for(int i = 0; i < tam; i++) {
-            if(num.charAt(i) != ',') {
+            if(num.charAt(i) != '.') {
                 String tmp = "";
                 tmp += num.charAt(i);
                 int aux2 = Integer.parseInt(tmp);
@@ -169,7 +171,7 @@ public class ConversorDeBases {
         int tam = num.length();
 
         for(int i = 0; i < tam; i++) {
-            if(num.charAt(i) == ',') {
+            if(num.charAt(i) == '.') {
                 i = tam;
             }
             else {
@@ -191,7 +193,7 @@ public class ConversorDeBases {
         int count = 0;
 
         for(int i = 0; i < tam; i++) {
-            if(num.charAt(i) == ',') {
+            if(num.charAt(i) == '.') {
                 count++;
             }
             else if((num.charAt(i) != '1' && num.charAt(i) != '0') || count > 1) {
