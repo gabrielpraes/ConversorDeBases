@@ -6,10 +6,11 @@ biário e decimal e vice-versa. O mais interessante é que funciona para número
 qualquer uma das conversões!
 O código está na branch master, é só rodar e ver a mágica acontecer!
 
+Na hora de digitar um número fracionário, utilize ponto "." ao invés da vírgula ",";
+
 Autores: Gabriel Praes, Lucas Gabriel e Brayan Mendes
 
 Você pode também ver o código em ação através desse link do repl.it:
 https://replit.com/@gabrielpraes/ConversaoDeBases#Main.java
 
-É válido mencionar que no replit é utilizado o Locale US, logo, temos que digitar numeros decimais
-utilizando ponto ao invés de vírgula, exemplo: 68.12
+
