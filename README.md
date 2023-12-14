@@ -10,3 +10,6 @@ Autores: Gabriel Praes, Lucas Gabriel e Brayan Mendes
 
 Você pode também ver o código em ação através desse link do repl.it:
 https://replit.com/@gabrielpraes/ConversaoDeBases#Main.java
+
+É válido mencionar que no replit é utilizado o Locale US, logo, temos que digitar numeros decimais
+utilizando ponto ao invés de vírgula, exemplo: 68.12
